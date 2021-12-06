@@ -38,3 +38,4 @@ To ensure that a verification is also run whenever a pact changes, we create a w
 ## Usage
 
 See the [Pactflow CI/CD Workshop](https://github.com/pactflow/ci-cd-workshop).
+
