@@ -92,6 +92,9 @@ create_or_update_pact_changed_webhook:
 test_pact_changed_webhook:
 	@curl -v -X POST ${PACT_BROKER_BASE_URL}/webhooks/${PACT_CHANGED_WEBHOOK_UUID}/execute -H "Authorization: Bearer ${PACT_BROKER_TOKEN}"
 
+publish_pacts:
+  @"${PACT_CLI}" publish ${PWD}/pacts --consumer-app-version ${GIT_COMMIT} --tag ${GIT_BRANCH}
+
 ## ======================
 ## Misc
 ## ======================
